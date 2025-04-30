@@ -149,15 +149,18 @@ def command_check(command):
             printwrapped("No response to edit.")
         line = ""
     elif command == SAVE:
-        with open("save.json", 'w') as f:
+        with open( "save.json" , 'w') as f:
             json.dump(messages, f)
             line=""
     elif command == LOAD:
-        with open("save.json", 'r') as f:
-            rangeno=-19
+        with open( "save.json", 'r') as f:
             messages = json.load(f)
-            print("...\n(" + str(len(messages)//2-rangeno) +  " exchanges)") #TODO: check this is actually accurate
-            print("...")
+            rangeno=-19
+            if len(messages)//2 > 19:
+                print("...\n(" + str(len(messages)//2+rangeno+1) +  " exchanges)") #TODO: not really accurate
+                print("...")
+            else:
+                rangeno=-len(messages)
             for i in range(rangeno,0):
                 if i % 2 == 0:
                     print(">", end=" ")
