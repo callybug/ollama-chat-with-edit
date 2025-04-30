@@ -17,3 +17,5 @@ Use `ollama list` to see available models. Say you want to use `mistral-small`.
 Then enter `python3 ollama-chat-with-edit2.py -m mistral-small`.
 Change `DEFAULT_MODEL` in the code to pick a default.
 
+And the saving _is_ dreadfully primitive. 
+`/save` will create a file called save.json in the working directory, and will **overwrite** any previously existing file of the same name, so look out!
