@@ -3,8 +3,8 @@
 This is incredibly basic, adding onto the [example code](https://github.com/ollama/ollama-python/blob/main/examples/chat-with-history.py).
 
 Features:
-- Edit last response/inference in $EDITOR.
-- Undo last prompt/response exchange.
+- Edit last response in $EDITOR.
+- Undo last prompt-response exchange.
 - Response regeneration.
 - Pseudo multi-line prompts (using Python `join`).
 - Dreadfully primitive save/load.
